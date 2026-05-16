@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>স্পন্সরশিপ চুক্তিপত্র — শহীদ ওসমান হাদি অলিম্পিয়াড ২০২৬</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-dark: #0a2e1d;
+            --primary: #1b5e20;
+            --primary-light: #2e7d32;
+            --accent: #d4af37;
+            --accent-light: #fff8e1;
+            --gold: #f9a825;
+            --text: #1a1a1a;
+            --text-light: #555;
+            --bg: #fafafa;
+            --card: #ffffff;
+            --border: #e0e0e0;
+            --radius: 12px;
+            --shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.9;
+            font-size: 15px;
+        }
+        .page { max-width: 900px; margin: 0 auto; background: white; box-shadow: 0 0 60px rgba(0,0,0,0.08); }
+
+        /* Cover */
+        .cover {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, #0d4a1c 100%);
+            color: white;
+            padding: 60px 40px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(212,175,55,0.15) 0%, transparent 50%);
+        }
+        .cover-content { position: relative; z-index: 1; }
+        .cover .confidential {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        .cover h1 {
+            font-size: clamp(1.5rem, 4vw, 2.4rem);
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        .cover .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+        .cover .gold-line {
+            width: 80px; height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--gold));
+            margin: 0 auto 20px;
+        }
+        .cover .meta {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            line-height: 2;
+        }
+
+        /* Content */
+        .content { padding: 40px; }
+        .section { margin-bottom: 40px; }
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title i { color: var(--accent); font-size: 1rem; }
+
+        p { margin-bottom: 14px; text-align: justify; }
+
+        /* Clause Box */
+        .clause {
+            background: #fafafa;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            margin: 16px 0;
+            position: relative;
+        }
+        .clause-num {
+            position: absolute;
+            top: -12px; left: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+        .clause-title {
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+            margin-top: 8px;
+            font-size: 1rem;
+        }
+        .clause-body { font-size: 0.95rem; color: var(--text-light); }
+        .clause-body ul { margin-left: 20px; margin-top: 8px; }
+        .clause-body li { margin-bottom: 6px; }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, var(--accent-light), #fffde7);
+            border-left: 4px solid var(--accent);
+            padding: 20px 24px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin: 20px 0;
+        }
+        .highlight-box strong { color: var(--primary-dark); }
+
+        /* Signature Area */
+        .signature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 40px 0;
+            padding: 30px;
+            background: #fafafa;
+            border-radius: var(--radius);
+            border: 2px solid var(--border);
+        }
+        .sig-block { text-align: center; }
+        .sig-line {
+            border-bottom: 2px solid var(--text);
+            margin: 60px auto 10px;
+            width: 80%;
+        }
+        .sig-name { font-weight: 700; color: var(--primary-dark); font-size: 1rem; }
+        .sig-title { font-size: 0.85rem; color: var(--text-light); margin-top: 4px; }
+
+        /* Table */
+        .table-wrap { overflow-x: auto; margin: 20px 0; border-radius: var(--radius); box-shadow: var(--shadow); }
+        table { width: 100%; border-collapse: collapse; font-size: 0.92rem; background: white; }
+        th {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td { padding: 12px; border-bottom: 1px solid #eee; vertical-align: top; }
+        tr:nth-child(even) { background: #fafafa; }
+
+        /* Stamp Area */
+        .stamp-area {
+            border: 3px dashed var(--border);
+            border-radius: var(--radius);
+            padding: 40px;
+            text-align: center;
+            margin: 30px 0;
+            background: #fafafa;
+        }
+        .stamp-area .placeholder {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+        footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+
+        @media (max-width: 768px) {
+            .cover { padding: 40px 20px 60px; }
+            .content { padding: 24px; }
+            .signature-grid { grid-template-columns: 1fr; gap: 30px; }
+        }
+        @media print {
+            .page { box-shadow: none; }
+            .section { page-break-inside: avoid; }
+            .clause { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+<!-- COVER -->
+<header class="cover">
+    <div class="cover-content">
+        <div class="confidential">CONFIDENTIAL — LEGAL AGREEMENT</div>
+        <h1>স্পন্সরশিপ চুক্তিপত্র</h1>
+        <div class="gold-line"></div>
+        <p class="subtitle">
+            শহীদ ওসমান হাদি অলিম্পিয়াড ২০২৬<br>
+            ইনকিলাব কালচারাল সেন্টার ও স্পন্সর প্রতিষ্ঠানের মধ্যে
+        </p>
+        <div class="meta">
+            চুক্তি সংস্করণ: ১.০ | মে ২০২৬<br>
+            বাংলাদেশ আইনের অধীনে প্রণীত
+        </div>
+    </div>
+</header>
+
+<div class="content">
+
+<!-- SECTION 1: PARTIES -->
+<div class="section">
+    <div class="section-title"><i class="fas fa-building"></i> চুক্তির পক্ষসমূহ</div>
+
+    <div class="clause">
+        <div class="clause-num">পক্ষ-১</div>
+        <div class="clause-title">আয়োজক প্রতিষ্ঠান</div>
+        <div class="clause-body">
+            <strong>ইনকিলাব কালচারাল সেন্টার</strong><br>
+            ঠিকানা: বাংলামোটর, ঢাকা, বাংলাদেশ<br>
+            প্রতিষ্ঠানের ধরন: সাংস্কৃতিক ও সামাজিক সংগঠন<br>
+            প্রতিনিধি: _____________________________<br>
+            পদবি: _____________________________<br>
+            মোবাইল: _____________________________<br>
+            ইমেইল: _____________________________
+        </div>
+    </div>
+
+    <div class="clause">
+        <div class="clause-num">পক্ষ-২</div>
+        <div class="clause-title">স্পন্সর প্রতিষ্ঠান</div>
+        <div class="clause-body">
+            <strong>প্রতিষ্ঠানের নাম:</strong> _____________________________<br>
+            ঠিকানা: _____________________________<br>
+            ব্যবসার ধরন: _____________________________<br>
+            প্রতিনিধি: _____________________________<br>
+            পদবি: _____________________________<br>
+            মোবাইল: _____________________________<br>
+            ইমেইল: _____________________________<br>
+            ট্রেড লাইসেন্স নং: _____________________________<br>
+            টিআইএন নং (যদি থাকে): _____________________________
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 2: EVENT DETAILS -->
+<div class="section">
+    <div class="section-title"><i class="fas fa-calendar-check"></i> ইভেন্টের বিবরণ</div>
+
+    <div class="table-wrap">
+        <table>
+            <tr><th style="width:35%">বিষয়</th><th>বিবরণ</th></tr>
+            <tr><td><strong>ইভেন্টের নাম</strong></td><td>শহীদ ওসমান হাদি অলিম্পিয়াড ২০২৬</td></tr>
+            <tr><td><strong>আয়োজক</strong></td><td>ইনকিলাব কালচারাল সেন্টার</td></tr>
+            <tr><td><strong>অনলাইন রাউন্ড</strong></td><td>১ জুলাই — ৫ আগস্ট ২০২৬ (৩৬ দিন)</td></tr>
+            <tr><td><strong>বিভাগীয় রাউন্ড</strong></td><td>আগস্ট — নভেম্বর ২০২৬ (৮ বিভাগ)</td></tr>
+            <tr><td><strong>গ্র্যান্ড ফিনালে</strong></td><td>১২ ডিসেম্বর ২০২৬ (শহীদ ওসমান হাদির শাহাদাত বার্ষিকী)</td></tr>
+            <tr><td><strong>গ্র্যান্ড ফিনালে ভেন্যু</strong></td><td>চীন-বাংলাদেশ মৈত্রী সম্মেলন কেন্দ্র (প্রাথমিক পরিকল্পনা)</td></tr>
+            <tr><td><strong>প্রাইজপুল</strong></td><td>৫০,০০,০০০ (পঞ্চাশ লাখ) টাকা</td></tr>
+            <tr><td><strong>মোট বাজেট</strong></td><td>১,৫০,০০,০০০ (দেড় কোটি) টাকা</td></tr>
+            <tr><td><strong>প্রত্যাশিত অংশগ্রহণকারী</strong></td><td>১০,০০০+ প্রতিযোগী</td></tr>
+            <tr><td><strong>প্রত্যাশিত দর্শক/রিচ</strong></td><td>৫০ লাখ+ (সোশ্যাল মিডিয়া ও ট্রেডিশনাল মিডিয়া)</td></tr>
+        </table>
+    </div>
+</div>
+
+<!-- SECTION 3: SPONSORSHIP TERMS -->
+<div class="section">
+    <div class="section-title"><i class="fas fa-handshake"></i> স্পন্সরশিপের শর্তাবলী</div>
+
+    <div class="clause">
+        <div class="clause-num">ধারা ১</div>
+        <div class="clause-title">স্পন্সরশিপ পরিমাণ ও প্যাকেজ</div>
+        <div class="clause-body">
+            <p>পক্ষ-২ (স্পন্সর) নিম্নলিখিত প্যাকেজ অনুযায়ী স্পন্সরশিপ প্রদান করতে সম্মত:</p>
+            <ul>
+                <li><strong>প্যাকেজের নাম:</strong> _____________________________</li>
+                <li><strong>স্পন্সরশিপ পরিমাণ:</strong> _____________________________ টাকা (অক্ষরে: _____________________________)</li>
+                <li><strong>পেমেন্টের ধরন:</strong> ☐ এককালীন ☐ কিস্তিতে (কিস্তির সংখ্যা: _____)</li>
+                <li><strong>প্রথম কিস্তির পরিমাণ:</strong> _____________________________ টাকা</li>
+                <li><strong>প্রথম কিস্তির তারিখ:</strong> _____________________________</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clause">
+        <div class="clause-num">ধারা ২</div>
+        <div class="clause-title">পক্ষ-১ (আয়োজক) এর প্রতিশ্রুতি</div>
+        <div class="clause-body">
+            <p>ইনকিলাব কালচারাল সেন্টার নিম্নলিখিত সুবিধাগুলো প্রদান করতে বাধ্য থাকবে:</p>
+            <ul>
+                <li>ওয়েবসাইটে স্পন্সরের লোগো নির্দিষ্ট স্থানে প্রদর্শন (প্যাকেজ অনুযায়ী)</li>
+                <li>সোশ্যাল মিডিয়া ক্যাম্পেইনে স্পন্সরের উল্লেখ (প্যাকেজ অনুযায়ী সংখ্যা)</li>
+                <li>বিভাগীয় রাউন্ড ও গ্র্যান্ড ফিনালেতে ব্যানার/ব্যাকড্রপে লোগো প্রদর্শন</li>
+                <li>গ্র্যান্ড ফিনালের প্রোগ্রাম বইতে স্পন্সরের বিজ্ঞাপন</li>
+                <li>টিভি/অনলাইন লাইভ সম্প্রচারে স্পন্সরের লোগো (প্যাকেজ অনুযায়ী)</li>
+                <li>VIP পাস প্রদান (প্যাকেজ অনুযায়ী সংখ্যা)</li>
+                <li>স্পন্সরের প্রতিনিধিকে গ্র্যান্ড ফিনালেতে সম্মাননা স্মারক প্রদান</li>
+                <li>প্রেস রিলিজ ও নিউজ কভারেজে স্পন্সরের নাম উল্লেখ</li>
+                <li>ইভেন্ট শেষে স্পন্সরশিপ সার্টিফিকেট প্রদান</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clause">
+        <div class="clause-num">ধারা ৩</div>
+        <div class="clause-title">পক্ষ-২ (স্পন্সর) এর প্রতিশ্রুতি</div>
+        <div class="clause-body">
+            <p>স্পন্সর প্রতিষ্ঠান নিম্নলিখিত শর্ত মেনে চলতে বাধ্য থাকবে:</p>
+            <ul>
+                <li>নির্ধারিত তারিখের মধ্যে সম্পূর্ণ স্পন্সরশিপ পরিমাণ পরিশোধ করতে হবে</li>
+                <li>স্পন্সরের লোগো, ব্র্যান্ডিং মেটেরিয়াল ও বিজ্ঞাপন নির্দিষ্ট সময়ের মধ্যে জমা দিতে হবে</li>
+                <li>স্পন্সরের পণ্য/সেবা ইভেন্টের মূল্যবোধের সাথে সঙ্গতিপূর্ণ হতে হবে</li>
+                <li>আয়োজকের অনুমতি ছাড়া ইভেন্টের নাম ব্যবহার করা যাবে না</li>
+                <li>স্পন্সরশিপ চুক্তির মেয়াদ শেষে ইভেন্টের নামে কোনো দাবি করা যাবে না</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clause">
+        <div class="clause-num">ধারা ৪</div>
+        <div class="clause-title">ব্র্যান্ডিং ও লোগো ব্যবহার</div>
+        <div class="clause-body">
+            <ul>
+                <li>স্পন্সরের লোগো হাই-রেজোলিউশনে (min 300 DPI, PNG/AI/EPS) আয়োজকের কাছে জমা দিতে হবে</li>
+                <li>আয়োজক লোগোর রং ও অনুপাত পরিবর্তন করতে পারবে না (স্পন্সরের অনুমতি ছাড়া)</li>
+                <li>স্পন্সরের নাম ও লোগো সব প্রচার মেটেরিয়ালে সঠিকভাবে ব্যবহার করা হবে</li>
+                <li>আয়োজক চূড়ান্ত সিদ্ধান্ত গ্রহণের অধিকার রাখে — কোথায় কীভাবে ব্র্যান্ডিং হবে</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clause">
+        <div class="clause-num">ধারা ৫</div>
+        <div class="clause-title">মিডিয়া কভারেজ ও প্রচার</div>
+        <div class="clause-body">
+            <ul>
+                <li>আয়োজক স্পন্সরকে সব মিডিয়া কভারেজের ক্লিপিংস/লিংকস প্রদান করবে</li>
+                <li>টিভি লাইভ সম্প্রচারের ক্ষেত্রে স্পন্সরের লোগো স্ক্রিনে প্রদর্শন করা হবে (প্যাকেজ অনুযায়ী)</li>
+                <li>সোশ্যাল মিডিয়া পোস্টে স্পন্সরকে ট্যাগ করা হবে</li>
+                <li>আয়োজক ফেসবুক পিক্সেল/অ্যানালিটিক্স ডেটা স্পন্সরকে শেয়ার করতে পারে (অপশনাল)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clause">
+        <div class="clause-num">ধারা ৬</div>
+        <div class="clause-title">পেমেন্ট শর্ত</div>
+        <div class="clause-body">
+            <ul>
+                <li>স্পন্সরশিপ অর্থ ইভেন্ট শুরুর কমপক্ষে ১৫ দিন আগে পরিশোধ করতে হবে</li>
+                <li>পেমেন্ট ব্যাংক ট্রান্সফার/চেকের মাধ্যমে করতে হবে</li>
+                <li>আয়োজকের ব্যাংক অ্যাকাউন্ট:<br>
+                    ব্যাংকের নাম: _____________________________<br>
+                    অ্যাকাউন্ট নং: _____________________________<br>
+                    অ্যাকাউন্টের নাম: _____________________________<br>
+                    ব্রাঞ্চ: _____________________________
+                </li>
+                <li>পেমেন্টের পর আয়োজক অফিসিয়াল রিসিপ্ট প্রদান করবে</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clause">
+        <div class="clause-num">ধারা ৭</div>
+        <div class="clause-title">চুক্তি বাতিল ও ফেরত নীতি</div>
+        <div class="clause-body">
+            <ul>
+                <li><strong>স্পন্সর কর্তৃক বাতিল:</strong> ৩০ দিন আগে জানালে ৭০% ফেরত, ১৫ দিন আগে ৫০% ফেরত, ১৫ দিনের কম সময়ে কোনো ফেরত নয়</li>
+                <li><strong>আয়োজক কর্তৃক বাতিল:</strong> ইভেন্ট বাতিল হলে স্পন্সরশিপের ১০০% ফেরত দেওয়া হবে</li>
+                <li><strong>ফোর্স মেজর:</strong> প্রাকৃতিক দুর্যোগ, রাজনৈতিক অস্থিরতা, সরকারি নিষেধাজ্ঞার ক্ষেত্রে উভয় পক্ষ মিলে সিদ্ধান্ত নেবে</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clause">
+        <div class="clause-num">ধারা ৮</div>
+        <div class="clause-title">গোপনীয়তা (Confidentiality)</div>
+        <div class="clause-body">
+            <ul>
+                <li>চুক্তির শর্তাবলী তৃতীয় পক্ষের কাছে প্রকাশ করা যাবে না (উভয় পক্ষের অনুমতি ছাড়া)</li>
+                <li>ফিনান্সিয়াল তথ্য গোপন রাখতে হবে</li>
+                <li>চুক্তি শেষেও গোপনীয়তা বজায় থাকবে</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clause">
+        <div class="clause-num">ধারা ৯</div>
+        <div class="clause-title">বিরোধ নিরসন</div>
+        <div class="clause-body">
+            <ul>
+                <li>উভয় পক্ষ আলোচনার মাধ্যমে বিরোধ নিরসনের চেষ্টা করবে</li>
+                <li>আলোচনায় সমাধান না হলে বাংলাদেশের আইন অনুযায়ী ঢাকার আদালতে বিচার হবে</li>
+                <li>চুক্তি বাংলাদেশের আইনের অধীনে পরিচালিত হবে</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clause">
+        <div class="clause-num">ধারা ১০</div>
+        <div class="clause-title">চুক্তির মেয়াদ ও পরিবর্তন</div>
+        <div class="clause-body">
+            <ul>
+                <li>এই চুক্তি স্বাক্ষরের তারিখ থেকে কার্যকর হবে</li>
+                <li>চুক্তির মেয়াদ: ইভেন্ট শেষের ৩০ দিন পর্যন্ত</li>
+                <li>যেকোনো পরিবর্তন লিখিতভাবে উভয় পক্ষের স্বাক্ষরে কার্যকর হবে</li>
+                <li>মৌখিক প্রতিশ্রুতি বা চুক্তি বলবৎ হবে না</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 4: ADDITIONAL CLAUSES -->
+<div class="section">
+    <div class="section-title"><i class="fas fa-plus-circle"></i> অতিরিক্ত ধারা (প্রয়োজন অনুযায়ী)</div>
+
+    <div class="clause">
+        <div class="clause-num">ধারা ১১</div>
+        <div class="clause-title">এক্সক্লুসিভিটি (প্ল্যাটিনাম পার্টনারদের জন্য)</div>
+        <div class="clause-body">
+            <p>প্ল্যাটিনাম পার্টনারের ক্ষেত্রে, একই ক্যাটেগরিতে (যেমন: টেলিকম, ফুড, ব্যাংক) আরেকটি প্রতিষ্ঠানকে স্পন্সর হিসেবে গ্রহণ করা হবে না, যদি না প্ল্যাটিনাম পার্টনার অনুমতি দেয়।</p>
+        </div>
+    </div>
+
+    <div class="clause">
+        <div class="clause-num">ধারা ১২</div>
+        <div class="clause-title">পণ্য/সেবা বিতরণ</div>
+        <div class="clause-body">
+            <p>স্পন্সর চাইলে ইভেন্টে নিজেদের পণ্য/সেবার স্যাম্পল বিতরণ করতে পারবে (আয়োজকের অনুমতি সাপেক্ষে)। পণ্যের মান ও নিরাপত্তার দায়িত্ব স্পন্সরের।</p>
+        </div>
+    </div>
+
+    <div class="clause">
+        <div class="clause-num">ধারা ১৩</div>
+        <div class="clause-title">ফটো ও ভিডিও রাইটস</div>
+        <div class="clause-body">
+            <p>ইভেন্টের সব ফটো ও ভিডিও আয়োজকের সম্পত্তি। তবে স্পন্সর নিজেদের প্রচারের জন্য ব্যবহার করতে পারবে (আয়োজককে ক্রেডিট দিয়ে)।</p>
+        </div>
+    </div>
+
+    <div class="clause">
+        <div class="clause-num">ধারা ১৪</div>
+        <div class="clause-title">ইনস্যুরেন্স</div>
+        <div class="clause-body">
+            <p>আয়োজক ইভেন্টের জন্য সাধারণ দায়বদ্ধতা ইনস্যুরেন্স (Public Liability Insurance) করবে। স্পন্সরের পণ্য/সেবার কারণে কোনো ক্ষতি হলে স্পন্সর দায়ী থাকবে।</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 5: SIGNATURE -->
+<div class="section">
+    <div class="section-title"><i class="fas fa-pen-fancy"></i> স্বাক্ষর</div>
+
+    <div class="highlight-box">
+        <p>উপরোক্ত শর্তাবলী আমরা উভয় পক্ষ পড়েছি, বুঝেছি এবং মেনে চলতে সম্মত হয়েছি। এই চুক্তি বাংলাদেশের আইনের অধীনে বলবৎ হবে।</p>
+    </div>
+
+    <div class="signature-grid">
+        <div class="sig-block">
+            <div class="sig-line"></div>
+            <div class="sig-name">পক্ষ-১ (আয়োজক)</div>
+            <div class="sig-title">ইনকিলাব কালচারাল সেন্টার</div>
+            <div style="margin-top:8px; font-size:0.85rem; color:var(--text-light);">
+                নাম: ___________________<br>
+                পদবি: ___________________<br>
+                তারিখ: ___________________
+            </div>
+        </div>
+        <div class="sig-block">
+            <div class="sig-line"></div>
+            <div class="sig-name">পক্ষ-২ (স্পন্সর)</div>
+            <div class="sig-title">___________________</div>
+            <div style="margin-top:8px; font-size:0.85rem; color:var(--text-light);">
+                নাম: ___________________<br>
+                পদবি: ___________________<br>
+                তারিখ: ___________________
+            </div>
+        </div>
+    </div>
+
+    <div class="stamp-area">
+        <div class="placeholder">
+            <i class="fas fa-stamp" style="font-size:2rem; color:var(--border); margin-bottom:10px;"></i><br>
+            আয়োজক প্রতিষ্ঠানের সীল<br>
+            (Official Seal of Inqilab Cultural Center)
+        </div>
+    </div>
+
+    <div class="stamp-area">
+        <div class="placeholder">
+            <i class="fas fa-stamp" style="font-size:2rem; color:var(--border); margin-bottom:10px;"></i><br>
+            স্পন্সর প্রতিষ্ঠানের সীল<br>
+            (Official Seal of Sponsor Organization)
+        </div>
+    </div>
+
+    <div style="margin-top:30px; padding:20px; background:#fafafa; border-radius:var(--radius); border:1px solid var(--border);">
+        <strong>সাক্ষী (Witness):</strong><br><br>
+        ১. নাম: _____________________________<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;ঠিকানা: _____________________________<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;স্বাক্ষর: _____________________________<br><br>
+        ২. নাম: _____________________________<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;ঠিকানা: _____________________________<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;স্বাক্ষর: _____________________________
+    </div>
+</div>
+
+<!-- SECTION 6: ANNEXURE -->
+<div class="section">
+    <div class="section-title"><i class="fas fa-paperclip"></i> সংযোজনী (Annexure)</div>
+
+    <div class="clause">
+        <div class="clause-num">A</div>
+        <div class="clause-title">স্পন্সরশিপ প্যাকেজের বিস্তারিত সুবিধা</div>
+        <div class="clause-body">
+            <div class="table-wrap">
+                <table>
+                    <tr><th>সুবিধা</th><th>ব্রোঞ্জ (১L)</th><th>সিলভার (৫L)</th><th>গোল্ড (১০L)</th><th>প্ল্যাটিনাম (২৫L+)</th></tr>
+                    <tr><td>ওয়েবসাইট লোগো</td><td>ফুটার</td><td>হোমপেজ + ফুটার</td><td>প্রিমিয়াম</td><td>এক্সক্লুসিভ</td></tr>
+                    <tr><td>সোশ্যাল শাউটআউট</td><td>২টি</td><td>৫টি</td><td>১০টি</td><td>অনলিমিটেড</td></tr>
+                    <tr><td>ব্যানার/ব্যাকড্রপ</td><td>১টি বিভাগ</td><td>৩টি বিভাগ</td><td>সব বিভাগ + ফিনালে</td><td>সব + স্টেজ</td></tr>
+                    <tr><td>VIP পাস</td><td>০</td><td>২টি</td><td>৫টি</td><td>১০টি + ব্যাকস্টেজ</td></tr>
+                    <tr><td>টিভি লাইভ লোগো</td><td>✗</td><td>✓</td><td>✓</td><td>✓ + প্রোডাক্ট</td></tr>
+                    <tr><td>স্পন্সর বুথ</td><td>✗</td><td>✗</td><td>✓</td><td>✓ (বড়)</td></tr>
+                    <tr><td>ওপেনিং স্পিচ</td><td>✗</td><td>✗</td><td>✗</td><td>✓</td></tr>
+                    <tr><td>টাইটেল স্পন্সরশিপ</td><td>✗</td><td>✗</td><td>✗</td><td>✓</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clause">
+        <div class="clause-num">B</div>
+        <div class="clause-title">যোগাযোগের তথ্য</div>
+        <div class="clause-body">
+            <p><strong>আয়োজকের দায়িত্বপ্রাপ্ত ব্যক্তি:</strong></p>
+            <p>
+                নাম: সালাহ উদ্দিন শুভ<br>
+                পদবি: সোশ্যাল মিডিয়া প্রধান, ইনকিলাব কালচারাল সেন্টার<br>
+                ফেসবুক: <a href="https://www.facebook.com/share/1CfSqJtiXZ/" target="_blank" style="color:var(--primary);">https://www.facebook.com/share/1CfSqJtiXZ/</a><br>
+                ঠিকানা: বাংলামোটর, ঢাকা, বাংলাদেশ
+            </p>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div style="font-size:1.1rem; font-weight:700; margin-bottom:6px;">ইনকিলাব কালচারাল সেন্টার</div>
+    <div style="opacity:0.9; margin-bottom:12px;">শহীদ ওসমান হাদি অলিম্পিয়াড ২০২৬</div>
+    <div style="opacity:0.7; font-size:0.8rem; margin-bottom:12px;">
+        এই চুক্তিপত্র বাংলাদেশের আইনের অধীনে প্রণীত। কোনো বিরোধের ক্ষেত্রে ঢাকার আদালতের এখতিয়ার বলবৎ হবে।
+    </div>
+    <a href="https://www.facebook.com/share/1CfSqJtiXZ/" target="_blank">
+        <i class="fab fa-facebook"></i> যোগাযোগ: সালাহ উদ্দিন শুভ
+    </a>
+</footer>
+
+</div>
+</body>
+</html>
