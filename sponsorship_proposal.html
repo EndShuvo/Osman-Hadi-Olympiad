@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>স্পন্সরশিপ প্রস্তাবনা — শহীদ ওসমান হাদি অলিম্পিয়াড ২০২৬</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-dark: #0a2e1d;
+            --primary: #1b5e20;
+            --primary-light: #2e7d32;
+            --accent: #d4af37;
+            --accent-light: #fff8e1;
+            --gold: #f9a825;
+            --text: #1a1a1a;
+            --text-light: #555;
+            --bg: #fafafa;
+            --card: #ffffff;
+            --border: #e8e8e8;
+            --radius: 16px;
+            --shadow: 0 4px 24px rgba(0,0,0,0.06);
+            --shadow-hover: 0 12px 40px rgba(0,0,0,0.12);
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.9;
+            font-size: 16px;
+        }
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
+
+        .page { max-width: 900px; margin: 0 auto; background: white; box-shadow: 0 0 60px rgba(0,0,0,0.08); }
+
+        /* Cover */
+        .cover {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 40%, #0d4a1c 100%);
+            color: white;
+            padding: 80px 40px 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(212,175,55,0.2) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        .cover-content { position: relative; z-index: 1; }
+        .cover .confidential {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            margin-bottom: 24px;
+            letter-spacing: 2px;
+        }
+        .cover h1 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+        .cover .subtitle {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-weight: 400;
+        }
+        .cover .gold-line {
+            width: 100px; height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--gold));
+            margin: 0 auto 24px;
+            border-radius: 2px;
+        }
+        .cover .meta {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            line-height: 2;
+        }
+        .cover .org-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--accent), var(--gold));
+            color: var(--primary-dark);
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-top: 24px;
+            box-shadow: 0 8px 30px rgba(212,175,55,0.35);
+        }
+
+        /* Content */
+        .content { padding: 50px 40px; }
+        .section { margin-bottom: 50px; }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--accent);
+        }
+        .section-icon {
+            width: 48px; height: 48px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        p { margin-bottom: 16px; text-align: justify; font-size: 1rem; }
+
+        /* Quote Box */
+        .quote-box {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 32px;
+            border-radius: var(--radius);
+            margin: 28px 0;
+            position: relative;
+            font-size: 1.15rem;
+            font-weight: 500;
+            line-height: 1.8;
+            border-left: 5px solid var(--accent);
+        }
+        .quote-box::before {
+            content: '"';
+            font-size: 4rem;
+            position: absolute;
+            top: 10px; left: 20px;
+            opacity: 0.2;
+            font-family: Georgia, serif;
+        }
+        .quote-box .author {
+            margin-top: 16px;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            font-weight: 600;
+        }
+
+        /* Info Boxes */
+        .info-box {
+            padding: 24px;
+            border-radius: var(--radius);
+            margin: 24px 0;
+            border-left: 5px solid;
+        }
+        .info-box.gold { background: var(--accent-light); border-color: var(--accent); }
+        .info-box.green { background: #e8f5e9; border-color: var(--primary); }
+        .info-box.blue { background: #e3f2fd; border-color: #1565c0; }
+        .info-box.red { background: #ffebee; border-color: #c62828; }
+        .info-box.purple { background: #f3e5f5; border-color: #6a1b9a; }
+        .info-box h4 { margin-bottom: 12px; font-size: 1.1rem; color: var(--primary-dark); }
+        .info-box ul { margin-left: 20px; }
+        .info-box li { margin-bottom: 8px; }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+        .stat-card {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .stat-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+        .stat-card .num {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+        }
+        .stat-card .label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 8px;
+            font-weight: 500;
+        }
+
+        /* Table */
+        .table-wrap { overflow-x: auto; margin: 24px 0; border-radius: var(--radius); box-shadow: var(--shadow); }
+        table { width: 100%; border-collapse: collapse; font-size: 0.95rem; background: white; }
+        th {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 14px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 14px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+        }
+        tr:nth-child(even) { background: #fafafa; }
+        tr:hover { background: #f1f8e9; }
+
+        /* Timeline */
+        .timeline { position: relative; padding-left: 30px; margin: 24px 0; }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px; top: 0; bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+        .tl-item { position: relative; margin-bottom: 24px; }
+        .tl-item::before {
+            content: '';
+            position: absolute;
+            left: -26px; top: 4px;
+            width: 16px; height: 16px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px var(--primary-light);
+        }
+        .tl-item.highlight::before { background: var(--accent); box-shadow: 0 0 0 3px var(--accent); }
+        .tl-date { font-weight: 700; color: var(--primary); font-size: 1rem; }
+        .tl-desc { color: var(--text); font-size: 0.95rem; margin-top: 4px; }
+
+        /* Package Cards */
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin: 24px 0;
+        }
+        .package-card {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .package-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+        .package-card.featured {
+            border-color: var(--accent);
+            background: linear-gradient(to bottom, var(--accent-light), white);
+        }
+        .package-card.featured::before {
+            content: '★ সর্বাধিক জনপ্রিয়';
+            position: absolute;
+            top: 0; right: 0;
+            background: var(--accent);
+            color: var(--primary-dark);
+            padding: 6px 16px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 0 0 0 12px;
+        }
+        .package-card .tier {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+        .package-card .amount {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+        .package-card ul { list-style: none; }
+        .package-card li {
+            padding: 8px 0 8px 28px;
+            position: relative;
+            font-size: 0.92rem;
+            border-bottom: 1px dashed #eee;
+        }
+        .package-card li:last-child { border-bottom: none; }
+        .package-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* VIP Section */
+        .vip-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+        .vip-card {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .vip-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+        .vip-card .icon { font-size: 2rem; margin-bottom: 12px; }
+        .vip-card .title { font-weight: 700; color: var(--primary-dark); margin-bottom: 6px; }
+        .vip-card .desc { font-size: 0.85rem; color: var(--text-light); }
+
+        /* Contact Box */
+        .contact-box {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            text-align: center;
+            margin: 40px 0;
+        }
+        .contact-box h3 { font-size: 1.5rem; margin-bottom: 16px; }
+        .contact-box p { opacity: 0.9; margin-bottom: 20px; text-align: center; }
+        .contact-box a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--accent), var(--gold));
+            color: var(--primary-dark);
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 8px 25px rgba(212,175,55,0.3);
+        }
+        .contact-box a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(212,175,55,0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        footer .org { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+        footer .event { opacity: 0.9; margin-bottom: 16px; }
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .cover { padding: 60px 20px 80px; }
+            .content { padding: 30px 20px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .package-grid { grid-template-columns: 1fr; }
+        }
+
+        @media print {
+            .page { box-shadow: none; }
+            .section { page-break-inside: avoid; }
+            .package-card { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+<!-- COVER -->
+<header class="cover">
+    <div class="cover-content">
+        <div class="confidential">CONFIDENTIAL — SPONSORSHIP PROPOSAL</div>
+        <h1>🏅 শহীদ ওসমান হাদি অলিম্পিয়াড ২০২৬</h1>
+        <div class="gold-line"></div>
+        <p class="subtitle">
+            জুলাই গণঅভ্যুত্থানের শহীদদের স্মরণে এবং নতুন প্রজন্মের প্রতিভা অন্বেষণে<br>
+            বাংলাদেশের সর্ববৃহৎ বহুমুখী সাংস্কৃতিক ও বুদ্ধিবৃত্তিক প্রতিযোগিতা
+        </p>
+        <div class="org-badge">
+            <i class="fas fa-landmark"></i>
+            ইনকিলাব কালচারাল সেন্টার আয়োজনে
+        </div>
+        <div class="meta" style="margin-top:24px;">
+            প্রস্তাবনা সংস্করণ: ১.০ | মে ২০২৬
+        </div>
+    </div>
+</header>
+
+<div class="content">
+
+<!-- SECTION 1: WHO WAS OSMAN HADI -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon"><i class="fas fa-star"></i></div>
+        <div>
+            <div class="section-title">শহীদ ওসমান হাদি — কে ছিলেন তিনি?</div>
+            <div class="section-subtitle">একজন শিক্ষক, কবি, বিপ্লবী ও স্বপ্নদ্রষ্টা</div>
+        </div>
+    </div>
+
+    <p>
+        <strong>শরীফ ওসমান বিন হাদি</strong> (৩০ জুন ১৯৯৩ — ১৮ ডিসেম্বর ২০২৫) ছিলেন একজন বাংলাদেশি শিক্ষক, কবি (সীমান্ত শরীফ নামে), সাংস্কৃতিক কর্মী ও রাজনৈতিক বিপ্লবী। ঝালকাঠি জেলার নলছিটি উপজেলার এক সম্ভ্রান্ত মুসলিম পরিবারে জন্মগ্রহণ করেন তিনি। ঢাকা বিশ্ববিদ্যালয়ের রাষ্ট্রবিজ্ঞান বিভাগ থেকে অনার্স ও মাস্টার্স সম্পন্ন করে শিক্ষকতা পেশায় আসেন।
+    </p>
+
+    <div class="quote-box">
+        সীমান্ত বাঁচাতে চাইলে ঘাস খেয়ে হলেও অস্ত্র বানাও, বাংলাদেশ!
+        <div class="author">— শহীদ ওসমান হাদি</div>
+    </div>
+
+    <p>
+        ২০২৪ সালের জুলাই গণঅভ্যুত্থানের পর তিনি <strong>ইনকিলাব মঞ্চ</strong> গঠন করেন — যার লক্ষ্য ছিল সব ধরনের আধিপত্যবাদের বিরুদ্ধে অবস্থান, স্বাধীনতা ও সার্বভৌমত্ব রক্ষা এবং ইনসাফভিত্তিক রাষ্ট্র বিনির্মাণ। ভারতীয় আধিপত্যবাদবিরোধী আন্দোলনে তিনি ছিলেন এক অনন্য কণ্ঠস্বর। ২০২৫ সালের ১২ ডিসেম্বর ঢাকার বিজয়নগরে আততায়ীর গুলিতে তিনি শাহাদাত বরণ করেন।
+    </p>
+
+    <div class="info-box gold">
+        <h4>🕊️ শহীদ ওসমান হাদির প্রতি শ্রদ্ধার্ঘ্য</h4>
+        <p>এই অলিম্পিয়াড তারই স্বপ্নের বাস্তবায়ন — যেখানে নতুন প্রজন্ম তাদের প্রতিভা প্রদর্শন করবে, যেমনটি তিনি চেয়েছিলেন। প্রতিটি ক্যাটেগরি একেকজন জুলাই শহীদের নামে করা হবে, যাতে তাঁদের আত্মত্যাগ চিরস্মরণীয় হয়ে থাকে।</p>
+    </div>
+</div>
+
+<!-- SECTION 2: INQILAB CULTURAL CENTER -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon"><i class="fas fa-landmark"></i></div>
+        <div>
+            <div class="section-title">ইনকিলাব কালচারাল সেন্টার</div>
+            <div class="section-subtitle">সংস্কৃতির বিপ্লবে অঙ্গীকারবদ্ধ</div>
+        </div>
+    </div>
+
+    <p>
+        <strong>ইনকিলাব কালচারাল সেন্টার</strong> হলো জুলাই গণঅভ্যুত্থান-পরবর্তী সময়ে গড়ে ওঠা একটি সাংস্কৃতিক ও রাজনৈতিক প্ল্যাটফর্ম। রাজধানীর বাংলামোটরে এর কার্যালয় অবস্থিত। শহীদ ওসমান হাদির হাত ধরেই এর যাত্রা শুরু। সেন্টারটি বর্তমানে সাহিত্য, সংস্কৃতি, রাজনীতি ও সমাজসেবায় সক্রিয়ভাবে কাজ করছে।
+    </p>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="num">২০২৪</div>
+            <div class="label">প্রতিষ্ঠার সাল</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">বাংলামোটর</div>
+            <div class="label">ঢাকা কার্যালয়</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">৫০০+</div>
+            <div class="label">সক্রিয় সদস্য</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">৮</div>
+            <div class="label">বিভাগীয় শাখা</div>
+        </div>
+    </div>
+
+    <div class="info-box green">
+        <h4>🎯 সেন্টারের লক্ষ্য ও উদ্দেশ্য</h4>
+        <ul>
+            <li>জুলাই শহীদদের আদর্শ ও স্বপ্নকে বাঁচিয়ে রাখা</li>
+            <li>নতুন প্রজন্মের মধ্যে সাংস্কৃতিক ও বুদ্ধিবৃত্তিক চর্চা উৎসাহিত করা</li>
+            <li>বাংলাদেশী সংস্কৃতির জাগরণ ও ভারতীয় আধিপত্যবাদের বিরুদ্ধে সোচ্চার থাকা</li>
+            <li>সারাদেশে তরুণ প্রতিভার সন্ধান ও বিকাশ</li>
+            <li>স্বাধীনতা, সার্বভৌমত্ব ও ন্যায়ভিত্তিক সমাজ প্রতিষ্ঠায় অবদান রাখা</li>
+        </ul>
+    </div>
+</div>
+
+<!-- SECTION 3: EVENT OVERVIEW -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon"><i class="fas fa-trophy"></i></div>
+        <div>
+            <div class="section-title">অলিম্পিয়াড ২০২৬ — পরিকল্পনার বিশালতা</div>
+            <div class="section-subtitle">দেশজুড়ে সর্ববৃহৎ বহুমুখী প্রতিযোগিতা</div>
+        </div>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="num">৫০ লাখ+</div>
+            <div class="label">প্রাইজপুল (টাকা)</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">৮</div>
+            <div class="label">বিভাগীয় পর্ব</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">৫+</div>
+            <div class="label">ক্যাটেগরি</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">১০,০০০+</div>
+            <div class="label">প্রত্যাশিত অংশগ্রহণকারী</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">১৬০+</div>
+            <div class="label">বিভাগীয় ফাইনালিস্ট</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">৫ মাস</div>
+            <div class="label">মোট সময়কাল</div>
+        </div>
+    </div>
+
+    <h3 style="color:var(--primary-dark); margin:28px 0 16px; font-size:1.15rem;">📅 সময়সূচি ও কাঠামো</h3>
+    <div class="timeline">
+        <div class="tl-item">
+            <div class="tl-date">১ জুলাই — ৫ আগস্ট (৩৬ দিন)</div>
+            <div class="tl-desc"><strong>অনলাইন রাউন্ড:</strong> সোশ্যাল মিডিয়ায় ভিডিও আপলোড, পাবলিক ভোটিং ও ভিউজের ভিত্তিতে প্রাথমিক বাছাই</div>
+        </div>
+        <div class="tl-item">
+            <div class="tl-date">আগস্ট — নভেম্বর</div>
+            <div class="tl-desc"><strong>বিভাগীয় রাউন্ড:</strong> বাংলাদেশের ৮ বিভাগে আলাদা আলাদা ভেন্যুতে। প্রতি বিভাগে প্রতি ক্যাটেগরি থেকে ২০ জন = মোট ১৬০ জন ফাইনালিস্ট</div>
+        </div>
+        <div class="tl-item highlight">
+            <div class="tl-date">১২ ডিসেম্বর ২০২৬</div>
+            <div class="tl-desc"><strong>🏆 গ্র্যান্ড ফিনালে:</strong> শহীদ ওসমান হাদির শাহাদাত বার্ষিকীতে চীন-বাংলাদেশ মৈত্রী সম্মেলন কেন্দ্রে (প্রাথমিক পরিকল্পনা)</div>
+        </div>
+    </div>
+
+    <div class="info-box blue">
+        <h4>🏛️ বিভাগীয় রাউন্ডের বিশেষত্ব</h4>
+        <p>প্রতিটি বিভাগীয় রাউন্ড হবে সেই বিভাগের একজন আইকনিক শহীদের নামে। যেমন:</p>
+        <ul>
+            <li><strong>ঢাকা বিভাগ:</strong> শহীদ ওসমান হাদি স্মৃতি পর্ব</li>
+            <li><strong>চট্টগ্রাম বিভাগ:</strong> শহীদ [স্থানীয় শহীদের নাম] স্মৃতি পর্ব</li>
+            <li><strong>রাজশাহী বিভাগ:</strong> শহীদ [স্থানীয় শহীদের নাম] স্মৃতি পর্ব</li>
+        </ul>
+        <p style="margin-top:10px;">প্রতি বিভাগে উপস্থিত থাকবেন: স্থানীয় সংসদ সদস্য, জেলা প্রশাসক, পুলিশ সুপার, বিশিষ্ট আলেম, শিক্ষাবিদ ও গুণী ব্যক্তিবর্গ।</p>
+    </div>
+</div>
+
+<!-- SECTION 4: VIP ATTENDANCE -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon"><i class="fas fa-users"></i></div>
+        <div>
+            <div class="section-title">গ্র্যান্ড ফিনালের বিশিষ্ট অতিথিবৃন্দ</div>
+            <div class="section-subtitle">জাতীয় ও আন্তর্জাতিক মঞ্চে আপনার ব্র্যান্ড</div>
+        </div>
+    </div>
+
+    <p>
+        গ্র্যান্ড ফিনালে হবে বাংলাদেশের রাজনৈতিক ও সাংস্কৃতিক ইতিহাসের এক অনন্য আয়োজন। আমরা আশা করছি এতে উপস্থিত থাকবেন:
+    </p>
+
+    <div class="vip-grid">
+        <div class="vip-card">
+            <div class="icon">🏛️</div>
+            <div class="title">প্রধানমন্ত্রী / প্রধান উপদেষ্টা</div>
+            <div class="desc">বাংলাদেশ সরকারের প্রধান</div>
+        </div>
+        <div class="vip-card">
+            <div class="icon">⚖️</div>
+            <div class="title">বিরোধী দলের নেতা</div>
+            <div class="desc">জাতীয় সংসদের বিরোধী দল</div>
+        </div>
+        <div class="vip-card">
+            <div class="icon">🎤</div>
+            <div class="title">স্পিকার</div>
+            <div class="desc">জাতীয় সংসদের স্পিকার</div>
+        </div>
+        <div class="vip-card">
+            <div class="icon">🇧🇩</div>
+            <div class="title">বিএনপি নেতৃত্ব</div>
+            <div class="desc">দলের শীর্ষ নেতৃবৃন্দ</div>
+        </div>
+        <div class="vip-card">
+            <div class="icon">☪️</div>
+            <div class="title">জামায়াতে ইসলামী</div>
+            <div class="desc">আমীর ও শীর্ষ নেতৃবৃন্দ</div>
+        </div>
+        <div class="vip-card">
+            <div class="icon">🌟</div>
+            <div class="title">ন্যাশনালিস্ট পার্টি</div>
+            <div class="desc">চেয়ারম্যান ও নেতৃবৃন্দ</div>
+        </div>
+        <div class="vip-card">
+            <div class="icon">📚</div>
+            <div class="title">বুদ্ধিজীবী ও আলেম</div>
+            <div class="desc">দেশের শীর্ষস্থানীয় ব্যক্তিবর্গ</div>
+        </div>
+        <div class="vip-card">
+            <div class="icon">🎭</div>
+            <div class="title">সাহিত্যিক ও সাংবাদিক</div>
+            <div class="desc">জাতীয় পুরস্কারপ্রাপ্ত ব্যক্তিবর্গ</div>
+        </div>
+    </div>
+
+    <div class="info-box purple">
+        <h4>🌍 আন্তর্জাতিক উপস্থিতি</h4>
+        <p>চীন-বাংলাদেশ মৈত্রী সম্মেলন কেন্দ্রে অনুষ্ঠিত হওয়ায় আমরা আশা করছি চীনা রাষ্ট্রদূত ও দূতাবাসের উচ্চপদস্থ কর্মকর্তাগণের উপস্থিতি। এছাড়াও বিভিন্ন দেশের কূটনীতিক ও আন্তর্জাতিক সংস্থার প্রতিনিধিরা আমন্ত্রিত থাকবেন।</p>
+    </div>
+</div>
+
+<!-- SECTION 5: MARKETING & REACH -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon"><i class="fas fa-bullhorn"></i></div>
+        <div>
+            <div class="section-title">মার্কেটিং ও প্রচার ক্যাম্পেইন</div>
+            <div class="section-subtitle">দেশব্যাপী হাইপ ও সোশ্যাল মিডিয়া ডোমিনেশন</div>
+        </div>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="num">৫০ লাখ+</div>
+            <div class="label">সোশ্যাল মিডিয়া রিচ (প্রত্যাশিত)</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">১০০+</div>
+            <div class="label">নিউজ পোর্টাল কভারেজ</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">২০+</div>
+            <div class="label">টিভি চ্যানেল কভারেজ</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">১০০০+</div>
+            <div class="label">ইনফ্লুয়েন্সার ক্যাম্পেইন</div>
+        </div>
+    </div>
+
+    <div class="info-box green">
+        <h4>📱 সোশ্যাল মিডিয়া ক্যাম্পেইন স্ট্র্যাটেজি</h4>
+        <ul>
+            <li><strong>ফেসবুক:</strong> ইভেন্ট পেজ, লাইভ স্ট্রিমিং, পেইড ক্যাম্পেইন, ভাইরাল কন্টেন্ট</li>
+            <li><strong>ইনস্টাগ্রাম:</strong> রিলস, স্টোরিজ, ইনফ্লুয়েন্সার কলাবোরেশন</li>
+            <li><strong>টিকটক:</strong> হ্যাশট্যাগ চ্যালেঞ্জ, প্রতিযোগীদের ভিডিও ভাইরাল</li>
+            <li><strong>ইউটিউব:</strong> প্রোমো ভিডিও, লাইভ স্ট্রিমিং, হাইলাইটস</li>
+            <li><strong>টুইটার/X:</strong> ট্রেন্ডিং হ্যাশট্যাগ, লাইভ আপডেট</li>
+        </ul>
+    </div>
+
+    <div class="info-box blue">
+        <h4>📺 ট্রেডিশনাল মিডিয়া কভারেজ</h4>
+        <ul>
+            <li>জাতীয় টিভি চ্যানেলে লাইভ সম্প্রচার (গ্র্যান্ড ফিনালে)</li>
+            <li>জাতীয় দৈনিক পত্রিকায় ফিচার ও বিজ্ঞাপন</li>
+            <li>রেডিও ক্যাম্পেইন (বিভাগীয় শহরগুলোতে)</li>
+            <li>বিলবোর্ড ও ডিজিটাল সাইনেজ (ঢাকা ও ৮ বিভাগীয় শহর)</li>
+        </ul>
+    </div>
+</div>
+
+<!-- SECTION 6: SPONSORSHIP PACKAGES -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon"><i class="fas fa-hand-holding-usd"></i></div>
+        <div>
+            <div class="section-title">স্পন্সরশিপ প্যাকেজ</div>
+            <div class="section-subtitle">আপনার ব্র্যান্ডকে জাতীয় মঞ্চে তুলে ধরুন</div>
+        </div>
+    </div>
+
+    <div class="package-grid">
+        <div class="package-card">
+            <div class="tier">🥉 ব্রোঞ্জ পার্টনার</div>
+            <div class="amount">৳ ১,০০,০০০</div>
+            <ul>
+                <li>ওয়েবসাইটে লোগো (ফুটার)</li>
+                <li>সোশ্যাল মিডিয়া শাউটআউট (২টি)</li>
+                <li>বিভাগীয় রাউন্ডে ব্যানার (১টি)</li>
+                <li>থ্যাংক ইউ সার্টিফিকেট</li>
+                <li>নিউজলেটার মেনশন</li>
+            </ul>
+        </div>
+        <div class="package-card">
+            <div class="tier">🥈 সিলভার পার্টনার</div>
+            <div class="amount">৳ ৫,০০,০০০</div>
+            <ul>
+                <li>ওয়েবসাইটে লোগো (হোমপেজ + ফুটার)</li>
+                <li>সোশ্যাল মিডিয়া শাউটআউট (৫টি)</li>
+                <li>বিভাগীয় রাউন্ডে ব্যানার (৩টি)</li>
+                <li>গ্র্যান্ড ফিনালে প্রোগ্রামে লোগো</li>
+                <li>২টি VIP পাস</li>
+                <li>প্রেস রিলিজে মেনশন</li>
+            </ul>
+        </div>
+        <div class="package-card featured">
+            <div class="tier">🥇 গোল্ড পার্টনার</div>
+            <div class="amount">৳ ১০,০০,০০০</div>
+            <ul>
+                <li>ওয়েবসাইটে প্রিমিয়াম লোগো প্লেসমেন্ট</li>
+                <li>সোশ্যাল মিডিয়া শাউটআউট (১০টি)</li>
+                <li>সব বিভাগীয় রাউন্ডে ব্যানার</li>
+                <li>গ্র্যান্ড ফিনালে স্টেজ ব্যাকড্রপ লোগো</li>
+                <li>৫টি VIP পাস + ব্যাকস্টেজ অ্যাক্সেস</li>
+                <li>টিভি লাইভ সম্প্রচারে লোগো</li>
+                <li>ডেডিকেটেড স্পন্সর বুথ</li>
+            </ul>
+        </div>
+        <div class="package-card">
+            <div class="tier">💎 প্ল্যাটিনাম পার্টনার</div>
+            <div class="amount">৳ ২৫,০০,০০০+</div>
+            <ul>
+                <li>টাইটেল স্পন্সরশিপ — "আপনার ব্র্যান্ড উপস্থাপিত শহীদ ওসমান হাদি অলিম্পিয়াড ২০২৬"</li>
+                <li>সব প্ল্যাটফর্মে এক্সক্লুসিভ লোগো প্লেসমেন্ট</li>
+                <li>অনলিমিটেড সোশ্যাল মিডিয়া প্রোমোশন</li>
+                <li>গ্র্যান্ড ফিনালে ওপেনিং স্পিচ সুযোগ</li>
+                <li>১০টি VIP পাস + ব্যাকস্টেজ + গ্রিন রুম</li>
+                <li>টিভি লাইভে প্রোডাক্ট প্লেসমেন্ট</li>
+                <li>কাস্টমাইজড মার্কেটিং ক্যাম্পেইন</li>
+                <li>১ বছরের পার্টনারশিপ রাইটস</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="info-box gold">
+        <h4>💡 কাস্টম প্যাকেজ</h4>
+        <p>আপনার বাজেট ও প্রয়োজন অনুযায়ী আমরা কাস্টমাইজড স্পন্সরশিপ প্যাকেজ তৈরি করতে পারি। যোগাযোগ করুন আমাদের টিমের সাথে।</p>
+    </div>
+</div>
+
+<!-- SECTION 7: WHY SPONSOR -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon"><i class="fas fa-heart"></i></div>
+        <div>
+            <div class="section-title">কেন স্পন্সর করবেন?</div>
+            <div class="section-subtitle">আপনার বিনিয়োগের প্রতিদান</div>
+        </div>
+    </div>
+
+    <div class="card-grid">
+        <div class="card">
+            <div class="card-icon" style="background:#e3f2fd; color:#1565c0;"><i class="fas fa-eye"></i></div>
+            <div class="card-title">জাতীয় দৃশ্যমানতা</div>
+            <div class="card-desc">দেশের সর্বোচ্চ পর্যায়ের নেতৃবৃন্দের উপস্থিতিতে আপনার ব্র্যান্ড জাতীয় মঞ্চে উঠে আসবে।</div>
+        </div>
+        <div class="card">
+            <div class="card-icon" style="background:#e8f5e9; color:var(--primary);"><i class="fas fa-users"></i></div>
+            <div class="card-title">তরুণ প্রজন্মের কাছে পৌঁছানো</div>
+            <div class="card-desc">১০,০০০+ প্রতিযোগী ও লক্ষাধিক দর্শকের কাছে সরাসরি পৌঁছানোর সুযোগ।</div>
+        </div>
+        <div class="card">
+            <div class="card-icon" style="background:#fff8e1; color:#f57f17;"><i class="fas fa-handshake"></i></div>
+            <div class="card-title">সামাজিক দায়বদ্ধতা (CSR)</div>
+            <div class="card-desc">জুলাই শহীদদের স্মরণে ও নতুন প্রজন্মের বিকাশে অবদান রেখে পজিটিভ ব্র্যান্ড ইমেজ তৈরি।</div>
+        </div>
+        <div class="card">
+            <div class="card-icon" style="background:#f3e5f5; color:#6a1b9a;"><i class="fas fa-chart-line"></i></div>
+            <div class="card-title">বিপুল ROI</div>
+            <div class="card-desc">৫০ লাখ+ সোশ্যাল রিচ, ১০০+ নিউজ পোর্টাল, ২০+ টিভি চ্যানেল — একসাথে সব প্ল্যাটফর্মে উপস্থিতি।</div>
+        </div>
+        <div class="card">
+            <div class="card-icon" style="background:#ffebee; color:#c62828;"><i class="fas fa-network-wired"></i></div>
+            <div class="card-title">নেটওয়ার্কিং</div>
+            <div class="card-desc">দেশের শীর্ষস্থানীয় রাজনৈতিক, সাংস্কৃতিক ও ব্যবসায়িক ব্যক্তিবর্গের সাথে সংযোগ।</div>
+        </div>
+        <div class="card">
+            <div class="card-icon" style="background:#e0f2f1; color:#00695c;"><i class="fas fa-award"></i></div>
+            <div class="card-title">ব্র্যান্ড লয়ালটি</div>
+            <div class="card-desc">তরুণ প্রজন্মের মনে দীর্ঘমেয়াদি ইতিবাচক ছাপ তৈরি — ভবিষ্যৎ ভোক্তাদের কাছে বিশ্বাসযোগ্যতা।</div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 8: BUDGET OVERVIEW -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon"><i class="fas fa-calculator"></i></div>
+        <div>
+            <div class="section-title">বাজেট সংক্ষিপ্তসার</div>
+            <div class="section-subtitle">স্বচ্ছতা ও জবাবদিহিতা</div>
+        </div>
+    </div>
+
+    <div class="table-wrap">
+        <table>
+            <tr><th>খাত</th><th>বরাদ্দ (টাকা)</th><th>বিবরণ</th></tr>
+            <tr><td><strong>প্রাইজপুল</strong></td><td>৫০,০০,০০০</td><td>গ্র্যান্ড ফিনালের প্রধান পুরস্কার ও বিভাগীয় পর্বের পুরস্কার</td></tr>
+            <tr><td><strong>গ্র্যান্ড ফিনালে</strong></td><td>৭৫,০০,০০০</td><td>ভেন্যু (চীন মৈত্রী), ডেকোরেশন, স্যুভিনিয়র, অতিথি গিফট</td></tr>
+            <tr><td><strong>৮ বিভাগীয় পর্ব</strong></td><td>৩৭,০০,০০০</td><td>৮ বিভাগে ভেন্যু, ক্রেস্ট, গিফট, যাতায়াত, লজিস্টিক</td></tr>
+            <tr><td><strong>মার্কেটিং ও প্রচার</strong></td><td>৫,০০,০০০</td><td>সোশ্যাল মিডিয়া, বিলবোর্ড, নিউজ পেপার, রেডিও</td></tr>
+            <tr><td><strong>প্রকাশনা</strong></td><td>১০,০০,০০০</td><td>ব্রুশিয়ার, খাম, দাওয়াত কার্ড, মেমেন্টো</td></tr>
+            <tr><td><strong>খাবার</strong></td><td>১৫,০০,০০০</td><td>সকল পর্বে অতিথি ও অংশগ্রহণকারীদের খাবার</td></tr>
+            <tr><td><strong>ওয়েবসাইট ও ডিজিটাল</strong></td><td>১,৮৮,০০০</td><td>ডোমেইন, হোস্টিং, ডেভেলপমেন্ট, এসএমএস</td></tr>
+            <tr><td><strong>ব্যাকআপ</strong></td><td>৫,৪১,০০০</td><td>আপৎকালীন ও অন্যান্য খরচ</td></tr>
+            <tr style="background:linear-gradient(135deg, var(--primary-dark), var(--primary)); color:white; font-weight:700;"><td>মোট বাজেট</td><td colspan="2">১,৫০,০০,০০০ (দেড় কোটি টাকা)</td></tr>
+        </table>
+    </div>
+
+    <div class="info-box red">
+        <h4>⚠️ স্বচ্ছতার অঙ্গীকার</h4>
+        <p>ইনকিলাব কালচারাল সেন্টার স্বচ্ছতার সাথে প্রতিটি টাকার হিসাব রাখবে। স্পন্সরদের জন্য মাসিক ফিনান্সিয়াল রিপোর্ট প্রদান করা হবে। অডিট রিপোর্ট ইভেন্ট শেষে সব স্পন্সরের কাছে জমা দেওয়া হবে।</p>
+    </div>
+</div>
+
+<!-- SECTION 9: CONTACT -->
+<div class="contact-box">
+    <h3><i class="fas fa-phone-alt"></i> যোগাযোগ করুন</h3>
+    <p>
+        আপনার ব্র্যান্ডকে জাতীয় মঞ্চে তুলে ধরতে আজই যোগাযোগ করুন।<br>
+        আমাদের টিম আপনার জন্য কাস্টমাইজড প্যাকেজ তৈরি করতে প্রস্তুত।
+    </p>
+    <a href="https://www.facebook.com/share/1CfSqJtiXZ/" target="_blank">
+        <i class="fab fa-facebook"></i>
+        সালাহ উদ্দিন শুভ — সোশ্যাল মিডিয়া প্রধান
+    </a>
+    <p style="margin-top:20px; font-size:0.9rem; opacity:0.8;">
+        ইনকিলাব কালচারাল সেন্টার | বাংলামোটর, ঢাকা
+    </p>
+</div>
+
+<!-- SECTION 10: TERMS -->
+<div class="section" style="margin-top:40px;">
+    <div class="section-header">
+        <div class="section-icon"><i class="fas fa-file-contract"></i></div>
+        <div>
+            <div class="section-title">শর্তাবলী ও নোট</div>
+            <div class="section-subtitle">স্পন্সরশিপ চুক্তির সাধারণ নিয়ম</div>
+        </div>
+    </div>
+
+    <div class="info-box" style="background:#f5f5f5; border-color:var(--text-light);">
+        <ul>
+            <li>স্পন্সরশিপ অর্থ ইভেন্ট শুরুর কমপক্ষে ১৫ দিন আগে পরিশোধ করতে হবে</li>
+            <li>স্পন্সরের লোগো ও ব্র্যান্ডিং মেটেরিয়াল নির্দিষ্ট সময়ের মধ্যে জমা দিতে হবে</li>
+            <li>ইনকিলাব কালচারাল সেন্টার ব্র্যান্ডিং প্লেসমেন্টের চূড়ান্ত সিদ্ধান্তadhikar রাখে</li>
+            <li>কোনো স্পন্সরশিপ প্যাকেজ পরিবর্তন বা বাতিল করতে চাইলে ৩০ দিন আগে জানাতে হবে</li>
+            <li>ইভেন্ট বাতিল হলে স্পন্সরশিপ অর্থের ৭০% ফেরত দেওয়া হবে (৩০% অ্যাডমিন খরচ কাটা হবে)</li>
+            <li>স্পন্সরদের নাম ও লোগো সব প্রচার মেটেরিয়ালে সঠিকভাবে ব্যবহার করা হবে</li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="org">ইনকিলাব কালচারাল সেন্টার</div>
+    <div class="event">শহীদ ওসমান হাদি অলিম্পিয়াড ২০২৬</div>
+    <div style="opacity:0.7; font-size:0.85rem; margin-bottom:12px;">
+        "সীমান্ত বাঁচাতে চাইলে ঘাস খেয়ে হলেও অস্ত্র বানাও, বাংলাদেশ!" — শহীদ ওসমান হাদি
+    </div>
+    <a href="https://www.facebook.com/share/1CfSqJtiXZ/" target="_blank">
+        <i class="fab fa-facebook"></i> প্রস্তাবনায়: সালাহ উদ্দিন শুভ
+    </a>
+</footer>
+
+</div>
+</body>
+</html>
