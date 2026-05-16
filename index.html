@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>শহীদ ওসমান হাদি অলিম্পিয়াড ২০২৬ — কেন্দ্রীয় তথ্য</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-dark: #0d3328;
+            --primary: #1b5e20;
+            --primary-light: #2e7d32;
+            --accent: #d4af37;
+            --accent-light: #fff8e1;
+            --gold: #f9a825;
+            --text: #212121;
+            --text-light: #616161;
+            --bg: #f5f7f5;
+            --card: #ffffff;
+            --radius: 20px;
+            --shadow: 0 10px 40px rgba(0,0,0,0.08);
+            --shadow-hover: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background: linear-gradient(135deg, #f5f7f5 0%, #e8f5e9 100%);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+            color: white;
+            padding: 80px 20px 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(212,175,55,0.2) 0%, transparent 60%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        .hero-content { position: relative; z-index: 1; }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .hero h1 {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.2);
+        }
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .hero .year {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary-dark);
+            padding: 6px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            box-shadow: 0 4px 20px rgba(212,175,55,0.4);
+        }
+
+        /* Floating Stats */
+        .stats-float {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin: -40px auto 50px;
+            position: relative;
+            z-index: 10;
+            padding: 0 20px;
+        }
+        .stat-chip {
+            background: white;
+            padding: 16px 28px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            min-width: 140px;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        .stat-chip:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+        .stat-chip .num {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        .stat-chip .label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Main Grid */
+        .main-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .action-card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 32px 28px;
+            box-shadow: var(--shadow);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .action-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .action-card:hover::before { opacity: 1; }
+        .action-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
+        }
+
+        .card-icon {
+            width: 70px; height: 70px;
+            border-radius: 20px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        .action-card:hover .card-icon { transform: scale(1.1) rotate(-5deg); }
+
+        .icon-web { background: linear-gradient(135deg, #e3f2fd, #bbdefb); color: #1565c0; }
+        .icon-budget { background: linear-gradient(135deg, #fff8e1, #ffecb3); color: #f57f17; }
+        .icon-proposal { background: linear-gradient(135deg, #f3e5f5, #e1bee7); color: #6a1b9a; }
+        .icon-partner { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); color: var(--primary); }
+        .icon-guide { background: linear-gradient(135deg, #ffebee, #ffcdd2); color: #c62828; }
+        .icon-contact { background: linear-gradient(135deg, #e0f2f1, #b2dfdb); color: #00695c; }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .card-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            margin-top: auto;
+        }
+        .action-card:hover .card-btn {
+            background: linear-gradient(135deg, var(--accent), var(--gold));
+            color: var(--primary-dark);
+            box-shadow: 0 4px 20px rgba(212,175,55,0.4);
+        }
+        .card-btn i { font-size: 0.85rem; transition: transform 0.3s; }
+        .action-card:hover .card-btn i { transform: translateX(4px); }
+
+        /* Instructions Section */
+        .guide-section {
+            max-width: 1100px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+        .guide-box {
+            background: linear-gradient(135deg, var(--accent-light), #fffde7);
+            border: 2px solid var(--accent);
+            border-radius: var(--radius);
+            padding: 40px;
+        }
+        .guide-box h2 {
+            color: var(--primary-dark);
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .guide-box h2 i { color: var(--accent); }
+
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 12px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin: 16px 0;
+            border-left: 4px solid var(--accent);
+        }
+        .code-block .tag { color: #569cd6; }
+        .code-block .attr { color: #9cdcfe; }
+        .code-block .val { color: #ce9178; }
+        .code-block .comment { color: #6a9955; }
+
+        .step-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+        .step-list li {
+            padding: 16px 0 16px 50px;
+            position: relative;
+            border-bottom: 1px dashed rgba(0,0,0,0.1);
+        }
+        .step-list li:last-child { border-bottom: none; }
+        .step-list li::before {
+            content: attr(data-step);
+            position: absolute;
+            left: 0;
+            top: 14px;
+            width: 36px; height: 36px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .step-list li strong { color: var(--primary-dark); display: block; margin-bottom: 4px; }
+        .step-list li span { color: var(--text-light); font-size: 0.95rem; }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        footer .org { font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; }
+        footer .event { opacity: 0.9; margin-bottom: 16px; }
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            padding: 10px 24px;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        footer a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .hero { padding: 60px 20px 80px; }
+            .main-grid { grid-template-columns: 1fr; }
+            .stats-float { gap: 10px; }
+            .stat-chip { padding: 12px 20px; min-width: 120px; }
+            .guide-box { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-medal"></i>
+                ইনকিলাব কালচারাল সেন্টার প্রেজেন্টস
+            </div>
+            <h1>🏅 শহীদ ওসমান হাদি অলিম্পিয়াড ২০২৬</h1>
+            <p>সমগ্র তথ্য কেন্দ্র — বাজেট, প্রযুক্তিগত নির্দেশনা, প্রস্তাবনা ও পার্টনারশিপ</p>
+            <div class="year">২০২৬</div>
+        </div>
+    </header>
+
+    <!-- Stats -->
+    <div class="stats-float">
+        <div class="stat-chip">
+            <div class="num">৫০ লক্ষ টাকা</div>
+            <div class="label">টোটাল প্রাইজপুল</div>
+        </div>
+	<div class="stat-chip">
+            <div class="num">৮</div>
+            <div class="label">বিভাগীয় পর্ব</div>
+        </div>
+        <div class="stat-chip">
+            <div class="num">১.৫ কোটি</div>
+            <div class="label">মোট বাজেট (৳)</div>
+        </div>
+        <div class="stat-chip">
+            <div class="num">৫+</div>
+            <div class="label">ক্যাটেগরি</div>
+        </div>
+        <div class="stat-chip">
+            <div class="num">৩টি</div>
+            <div class="label">রাউন্ড</div>
+        </div>
+    </div>
+
+    <!-- Main Action Cards -->
+    <main class="main-grid">
+
+        <!-- Website Requirement -->
+        <a href="Olympiad_2026_Complete_Technical_Guide.html" class="action-card">
+            <div class="card-icon icon-web">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="card-title">ওয়েবসাইট রিকোয়ারমেন্ট</div>
+            <div class="card-desc">
+                সম্পূর্ণ প্রযুক্তিগত নির্দেশনা — রেজিস্ট্রেশন, পেমেন্ট, এসএমএস, জাজ প্যানেল, বিভাগীয় রাউন্ড সহ সব কিছুর বিস্তারিত
+            </div>
+            <div class="card-btn">
+                দেখুন <i class="fas fa-arrow-right"></i>
+            </div>
+        </a>
+
+        <!-- Budget -->
+        <a href="budget_dashboard.html" class="action-card">
+            <div class="card-icon icon-budget">
+                <i class="fas fa-chart-pie"></i>
+            </div>
+            <div class="card-title">বাজেট বিবরণী</div>
+            <div class="card-desc">
+                সম্পূর্ণ বাজেট ড্যাশবোর্ড — প্রাথমিক খরচ, ৮ বিভাগীয় পর্ব, গ্র্যান্ড ফিনালে, সাধারণ খরচ ও ব্যাকআপ ফান্ড
+            </div>
+            <div class="card-btn">
+                দেখুন <i class="fas fa-arrow-right"></i>
+            </div>
+        </a>
+
+        <!-- Proposal Demo -->
+        <a href="proposal_demo.html" class="action-card">
+            <div class="card-icon icon-proposal">
+                <i class="fas fa-file-alt"></i>
+            </div>
+            <div class="card-title">প্রস্তাবনা ডেমো</div>
+            <div class="card-desc">
+                ইভেন্ট প্রস্তাবনার ডেমো সংস্করণ — স্পন্সরদের দেখানোর জন্য, কী কী থাকবে, কীভাবে উপস্থাপন করবেন
+            </div>
+            <div class="card-btn">
+                দেখুন <i class="fas fa-arrow-right"></i>
+            </div>
+        </a>
+
+        <!-- Partnership Agreement -->
+        <a href="partnership_demo.html" class="action-card">
+            <div class="card-icon icon-partner">
+                <i class="fas fa-handshake"></i>
+            </div>
+            <div class="card-title">পার্টনারশিপ এগ্রিমেন্ট</div>
+            <div class="card-desc">
+                স্পন্সরশিপ ও পার্টনারশিপ চুক্তির ডেমো — স্পন্সরদের জন্য প্রস্তাবিত প্যাকেজ ও শর্তাবলী
+            </div>
+            <div class="card-btn">
+                দেখুন <i class="fas fa-arrow-right"></i>
+            </div>
+        </a>
+
+      
+
+        <!-- Contact -->
+        <a href="https://www.facebook.com/share/1CfSqJtiXZ/" target="_blank" class="action-card">
+            <div class="card-icon icon-contact">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="card-title">যোগাযোগ</div>
+            <div class="card-desc">
+                সালাহ উদ্দিন শুভ
+            </div>
+            <div class="card-btn">
+                ফেসবুক <i class="fas fa-external-link-alt"></i>
+            </div>
+        </a>
+
+    </main>
+
+   
+    <!-- Footer -->
+    <footer>
+        <div class="org">ইনকিলাব কালচারাল সেন্টার</div>
+        <div class="event">শহীদ ওসমান হাদি অলিম্পিয়াড ২০২৬</div>
+        <a href="https://www.facebook.com/share/1CfSqJtiXZ/" target="_blank">
+            <i class="fab fa-facebook"></i>
+            প্রস্তাবনায়: সালাহ উদ্দিন শুভ
+        </a>
+    </footer>
+
+</body>
+</html>
